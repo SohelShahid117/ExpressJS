@@ -8,7 +8,7 @@ const app = express()
 const port = 3001
 const hostName = '127.0.0.1'
 
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser')   //https://www.npmjs.com/package/body-parser
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
@@ -46,12 +46,25 @@ app.get('/',(req,res)=>{
 })
 */
 
+/*
 //received post data:using json format || form data
+//http://127.0.0.1:3001/user
 app.post('/user',(req,res)=>{
     // res.send(`data using post method`)
     const id = req.body.id
     const name = req.body.name
     res.send(`I am From Post Method.User id is ${id}.Name is ${name}`)
+})
+*/
+
+app.get('/register',(req,res)=>{
+    res.sendFile(__dirname+"/register.html")
+})
+app.post('/register',(req,res)=>{
+    const fullName = req.body.fullName
+    const email = req.body.email
+    const password = req.body.password
+    res.send(`data shoes from post method.User FullName is ${fullName}.Email is ${email}.Password is ${password}`)
 })
 
 app.listen(port,()=>{
