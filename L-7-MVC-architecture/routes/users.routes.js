@@ -1,7 +1,7 @@
 //routes
 const express = require('express')
-const getUser = require('../controllers/users.controller')
-const saveUser = require('../controllers/users.controller')
+const getUser = require('/..controllers/users.controller')
+const saveUser = require('/../controllers/users.controller')
 const router = express().router
 
 router.get('/',(req,res)=>{

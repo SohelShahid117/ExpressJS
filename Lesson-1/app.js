@@ -37,31 +37,28 @@ app.delete("/",(req,res)=>{
 */
 
 app.use("/",(req,res)=>{
-    res.send('<h1>i am a get request at home(/) route</h1>')
-    res.end()
+    // res.send('<h1>i am a get request at home(/) route</h1>')
+    // res.end()
+    res.statusCode==200
+    res.sendFile(__dirname+"/views/index.html")
 })
 
 app.use("/about",(req,res)=>{
     res.send('<h1>i am a get request at about route</h1>')
 })
 app.use("/register",(req,res)=>{
-    res.send('<h1>i am a get request at register route</h1>')
+    // res.send('<h1>i am a get request at register route</h1>')
+    // res.status(200).json({
+    //     "name":"sohel",
+    //     "age":34,
+    //     "statusCode":200
+    // })
+    // res.redirect('/login')
+    res.statusCode==200
+    res.sendFile(__dirname+"/views/register.html")
 })
 app.use("/login",(req,res)=>{
     res.send('<h1>i am a get request at login route</h1>')
-})
-
-app.use("/",(req,res)=>{
-    res.send('<h1>i am a post request at home route</h1>')
-    res.end()
-})
-app.use("/",(req,res)=>{
-    res.send('<h1>i am a put request at home route</h1>')
-    res.end()
-})
-app.use("/",(req,res)=>{
-    res.send('<h1>i am a delete request at delete route</h1>')
-    res.end()
 })
 
 app.use((req,res)=>{

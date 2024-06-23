@@ -1,6 +1,6 @@
 //controller
 const path = require('path')
-const users =require('../controllers/users.controller')
+const users =require('/../controllers/users.controller')
 
 
 const getUser = (req,res)=>{

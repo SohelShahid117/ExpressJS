@@ -6,7 +6,7 @@ const app = express()
 const port = 3000
 const hostName = '127.0.0.1'
 
-//25 min done
+
 
 // const userRouter = require('./routes/users.routes')
 const router = require('./routes/users.routes')
