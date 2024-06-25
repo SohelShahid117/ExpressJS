@@ -15,6 +15,7 @@ app.use(bodyParser.json())
 
 app.use(express.urlencoded({extended:true}))
 
+//models
 const users = [
     {
         "name":"shahid",
@@ -28,6 +29,8 @@ const users = [
     }
 ]
 
+
+//views
 const htmlForm = `
 <form method="post" action="/users">
     <input type="text" name="name" placeholder="enter name"> </br></br>
@@ -38,6 +41,7 @@ const htmlForm = `
 `
 
 
+//routes+controllers
 app.get('/',(req,res)=>{
     res.send('i am from home route')
 })
