@@ -4,9 +4,8 @@
 const app = require('./app')
 // const path = require('path')
 
-const port = 4001
+const port = 4000
 const hostName = '127.0.0.1'
-
 
 app.listen(port,()=>{
     console.log(`server is running at http://${hostName}:${port}`)
